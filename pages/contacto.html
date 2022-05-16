@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctable.cba</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="fondoContacto">
+    
+    <header>
+        <img src="../images/Iso Doctable.png" alt="logo" class="logo">
+        <nav>
+            <ul class="navegador">
+                <li class="navIzquierda"><a href="../index.html">Inicio</a></li>
+                <li class="navIzquierda"><a href="noticias.html">Noticias</a></li>
+                <li class="navIzquierda"><a href="ludoteca.html">Ludoteca</a></li>
+                <li class="navIzquierda"><a href="galeria.html">Galeria</a></li>
+                <li class="navActivo"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="enviar.php" method="post">
+        <fieldset class="formulario" >
+            <legend class="tituloFormulario">Contactanos</legend>
+            <div class="segmentosFormulario">
+                <label for="name">Nombre:</label>
+                <input type="text" placeholder="Nombre y apellido">
+            </div>
+            <div class="segmentosFormulario">
+                <Label for="mail">Correo :</Label>
+                <input type="mail" placeholder="Correo Electronico">
+            </div>
+            <div class="segmentosFormulario">
+                <Label for="telefono">Telefono:</Label>
+                <input type="text"placeholder="N° de telefono">
+            </div>
+            <div class="segmentosFormulario">
+                <label for="genero">Genero</label>
+                    <select name="genero">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="indefinido">indefinido</option>
+                    </select>
+            </div>
+            <div class="segmentosFormulario">
+                <label for="permiso">Quieres recibir notificaciones. </label>
+                <input type="checkbox" name="permiso" value="si">
+            </div>
+            <div class="segmentosFormulario">
+                <textarea name="Comentario" id="comment" cols="30" rows="10"placeholder="Comentario"></textarea>
+            </div>
+            <div class="segmentosFormulario">
+                <button type="submit">enviar formulario</button>
+                <button type="reset">borrar formulario</button>
+            </div>
+        </fieldset>
+        </form>
+    </main>
+
+    <footer id="pie">
+        <div class="iconosFooter">
+            <a href="https://www.instagram.com/doctable.cba/"target="_blank">
+            <i class="fa-brands fa-instagram-square"></i></a>
+            <a href="https://www.facebook.com/Doctablecba"target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+    
+    </footer>
+    
+</body>
+</html>
