@@ -1047,6 +1047,23 @@ section.carrusel .fotoGaleria {
   width: 80%;
 }
 
+main.contacto fieldset.formulario {
+  background-image: url(../images/contacto_fondo.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 25px;
+  border: 15px double rgb(11, 55, 58);
+  font-family: fantasy;
+}
+main.contacto fieldset.formulario div.segmentosFormulario {
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

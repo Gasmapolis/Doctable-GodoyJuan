@@ -710,6 +710,28 @@ section.carrusel{
     }
 }
 // seccion Galeria Finalizado // 
+
+// seccion Contacto inicio // 
+
+main.contacto{
+    fieldset.formulario{
+        background-image: url(../images/contacto_fondo.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 45%;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 25px;
+        border: 15px double rgb(11, 55, 58);
+        font-family: fantasy;
+        div.segmentosFormulario{
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+    }
+}
+// seccion Contacto Finalizado // 
 // animaciones // 
 @keyframes fadeIn {
     from {
