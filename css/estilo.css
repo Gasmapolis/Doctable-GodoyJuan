@@ -22,15 +22,17 @@ header {
   border-bottom: 0.1px hidden orange;
   border-style: ridge;
   margin-bottom: 15px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0s;
 }
 header .logo {
   margin-left: 25%;
   box-sizing: border-box;
   height: 50%;
   width: 50%;
-  animation-name: fadeIn;
-  animation-duration: 5s;
-  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-name: tada;
 }
 header nav ul.navegador {
   display: flex;
@@ -1144,6 +1146,10 @@ main.agradecimiento {
 }
 main.agradecimiento div.jumbotron {
   background-color: transparent;
+}
+main.agradecimiento div.jumbotron .jugando {
+  animation-name: heartBeat;
+  animation-duration: 2s;
 }
 
 @keyframes fadeIn {

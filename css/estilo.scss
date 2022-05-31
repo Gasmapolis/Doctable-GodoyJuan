@@ -37,14 +37,16 @@ header {
     border-bottom: 0.1px hidden orange;
     border-style: ridge;
     margin-bottom: 15px;
+    animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-delay: 0s;
 
     .logo {
         margin-left: 25%;
         box-sizing: border-box;
         @include tamaño(50%, 50%);
-        animation-name: fadeIn;
-        animation-duration: 5s;
-        animation-delay: 0s;
+        animation-duration: 3s;
+        animation-name: tada;
     }
 
 
@@ -814,7 +816,12 @@ main.agradecimiento{
     background-size: cover;
     div.jumbotron{
         background-color: transparent;
+        .jugando{
+            animation-name: heartBeat;
+            animation-duration: 2s;    
+        }
     }
+
 }
 // seccion Formulario fin // 
 
