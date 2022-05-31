@@ -91,7 +91,7 @@ header nav ul.navegador a {
     font-size: 10px;
   }
   header ul .navActivo {
-    font-size: 14px;
+    font-size: 20px;
   }
   header section.inicioNoticias {
     width: 90%;
@@ -855,7 +855,7 @@ body.fondoNoticias section.noticias div.noticia2 {
     grid-template-rows: 10px 200px 200px 200px 1fr;
     justify-content: center;
   }
-  body.fondoNoticias div.noticia1, body.fondoNoticias section.noticias div.noticia2 {
+  body.fondoNoticias section.noticias div.noticia1, body.fondoNoticias section.noticias div.noticia2 {
     display: flex;
     flex-flow: column nowrap;
     flex-direction: column;
@@ -864,7 +864,10 @@ body.fondoNoticias section.noticias div.noticia2 {
     grid-column: 2/3;
     grid-row: 2/4;
   }
-  body.fondoNoticias div.noticia2 {
+  body.fondoNoticias section.noticias div.noticia1 .infoNoticia, body.fondoNoticias section.noticias div.noticia2 .infoNoticia {
+    font-size: 12px;
+  }
+  body.fondoNoticias section.noticias div.noticia2 {
     display: flex;
     flex-flow: column nowrap;
     flex-direction: column;
@@ -1035,33 +1038,112 @@ main section.juegoLudoteca div.juegoLudoteca2 iframe.videoLudoteca {
   border: 4px double blueviolet;
   box-shadow: 0px 0px 10px 10px white;
 }
+@media only screen and (max-width: 700px) {
+  main section.juegoLudoteca div.juegoLudoteca1 {
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: 40px 200px 200px 200px 1fr;
+    justify-content: center;
+  }
+  main section.juegoLudoteca div.juegoLudoteca1 h2.civilization {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin: auto;
+  }
+  main section.juegoLudoteca div.juegoLudoteca1 img.imgJuego {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    margin: auto;
+  }
+  main section.juegoLudoteca div.juegoLudoteca1 p.sinopsisLudoteca {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+  }
+  main section.juegoLudoteca div.juegoLudoteca1 iframe.videoLudoteca {
+    grid-column: 1/4;
+    grid-row: 4/6;
+    width: 80%;
+    height: 90%;
+    margin-bottom: 15px;
+  }
+  main section.juegoLudoteca div.juegoLudoteca2 {
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: 40px 200px 200px 200px 1fr;
+    justify-content: center;
+  }
+  main section.juegoLudoteca div.juegoLudoteca2 h2.wonders {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin: auto;
+  }
+  main section.juegoLudoteca div.juegoLudoteca2 img.imgJuego {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    margin: auto;
+  }
+  main section.juegoLudoteca div.juegoLudoteca2 p.sinopsisLudoteca {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+  }
+  main section.juegoLudoteca div.juegoLudoteca2 iframe.videoLudoteca {
+    grid-column: 1/4;
+    grid-row: 4/6;
+    width: 80%;
+    height: 90%;
+    margin-bottom: 15px;
+  }
+}
+
+.fondoGaleria {
+  background-image: url(../images/marco_galeria.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 section.carrusel {
+  margin-top: 5%;
+  margin-bottom: 5%;
   width: 80%;
   margin-left: 10%;
   border: 15px solid blue;
   border-radius: 40px;
 }
 section.carrusel .fotoGaleria {
-  height: 80%;
-  width: 80%;
+  height: 50%;
+  width: 60%;
 }
 
-main.contacto fieldset.formulario {
-  background-image: url(../images/contacto_fondo.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 45%;
+main.contacto form.formulario {
+  background-image: url(../images/fondoFormulario.png);
+  background-size: cover;
+  width: 90%;
   margin: 0 auto;
   margin-top: 30px;
   padding: 25px;
   border: 15px double rgb(11, 55, 58);
-  font-family: fantasy;
 }
-main.contacto fieldset.formulario div.segmentosFormulario {
-  margin-left: 10px;
-  margin-top: 5px;
-  margin-right: 5px;
+main.contacto form.formulario label {
+  font-family: fantasy;
+  font-size: 20px;
+}
+main.contacto form.formulario option {
+  font-weight: bolder;
+}
+
+main.agradecimiento {
+  border: 10px solid blueviolet;
+  background-color: #eea928;
+  background-image: url(https://acegif.com/wp-content/gif/confetti-44.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main.agradecimiento div.jumbotron {
+  background-color: transparent;
 }
 
 @keyframes fadeIn {

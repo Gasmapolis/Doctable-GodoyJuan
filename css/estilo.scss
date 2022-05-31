@@ -115,7 +115,7 @@ header {
         }
 
         ul .navActivo {
-            font-size: 14px;
+            font-size: 20px;
         }
 
         section.inicioNoticias {
@@ -506,28 +506,30 @@ body.fondoNoticias {
             grid-template-columns: 1fr 200px 1fr;
             grid-template-rows: 10px 200px 200px 200px 1fr;
             justify-content: center;
-        }
 
-        div.noticia1 {
-            display: flex;
-            flex-flow: column nowrap;
-            flex-direction: column;
-            align-self: center;
-            justify-self: center;
-            grid-column: 2/3;
-            grid-row: 2/4;
-        }
+            div.noticia1 {
+                display: flex;
+                flex-flow: column nowrap;
+                flex-direction: column;
+                align-self: center;
+                justify-self: center;
+                grid-column: 2/3;
+                grid-row: 2/4;
+                .infoNoticia{
+                    font-size: 12px;
+                }
+            }
 
-        div.noticia2 {
-            display: flex;
-            flex-flow: column nowrap;
-            flex-direction: column;
-            align-self: center;
-            justify-self: center;
-            grid-column: 2/3;
-            grid-row: 4/6;
+            div.noticia2 {
+                display: flex;
+                flex-flow: column nowrap;
+                flex-direction: column;
+                align-self: center;
+                justify-self: center;
+                grid-column: 2/3;
+                grid-row: 4/6;
+            }
         }
-
         .imgNoticia {
             @include tamaño(250px, 250px);
             margin: 0 auto;
@@ -694,19 +696,89 @@ main{
                 box-shadow: 0px 0px 10px 10px white;
             }
         }
-
     }
+    @media only screen and (max-width: 700px){
+        section.juegoLudoteca{
+            div.juegoLudoteca1{
+                grid-template-columns: 1fr 300px 1fr;
+                grid-template-rows: 40px 200px 200px 200px 1fr;
+                justify-content: center;
+                h2.civilization{
+                    grid-column: 1/4;
+                    grid-row: 1/2;
+                    margin: auto;
+                }
+                img.imgJuego{
+                    grid-column: 1/4;
+                    grid-row: 2/3;
+                    margin: auto;
+                }
+                p.sinopsisLudoteca{
+                    grid-column: 1/4;
+                    grid-row: 3/4;
+                    width: 80%;
+                    height: 80%;
+                    margin: auto;
+                }
+                iframe.videoLudoteca{
+                    grid-column: 1/4;
+                    grid-row: 4/6;
+                    width: 80%;
+                    height: 90%;
+                    margin-bottom: 15px;
+                }
+            }
+            div.juegoLudoteca2{
+                grid-template-columns: 1fr 300px 1fr;
+                grid-template-rows: 40px 200px 200px 200px 1fr;
+                justify-content: center;
+                h2.wonders{
+                    grid-column: 1/4;
+                    grid-row: 1/2;
+                    margin: auto;
+                }
+                img.imgJuego{
+                    grid-column: 1/4;
+                    grid-row: 2/3;
+                    margin: auto;
+                }
+                p.sinopsisLudoteca{
+                    grid-column: 1/4;
+                    grid-row: 3/4;
+                    width: 80%;
+                    height: 80%;
+                    margin: auto;
+                }
+                iframe.videoLudoteca{
+                    grid-column: 1/4;
+                    grid-row: 4/6;
+                    width: 80%;
+                    height: 90%;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    
 }
 // seccion Ludoteca finalizado // 
 
 // seccion Galeria inicio //
+.fondoGaleria{
+    background-image: url(../images/marco_galeria.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 section.carrusel{
+    margin-top: 5%;
+    margin-bottom: 5%;
     width: 80%;
     margin-left: 10%;
     border: 15px solid blue;
     border-radius: 40px;
     .fotoGaleria{
-        @include tamaño(80% , 80%)
+        @include tamaño(50% , 60%)
     }
 }
 // seccion Galeria Finalizado // 
@@ -714,24 +786,38 @@ section.carrusel{
 // seccion Contacto inicio // 
 
 main.contacto{
-    fieldset.formulario{
-        background-image: url(../images/contacto_fondo.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 45%;
+    form.formulario{
+        background-image: url(../images/fondoFormulario.png);
+        background-size: cover;
+        width: 90%;
         margin: 0 auto;
         margin-top: 30px;
         padding: 25px;
         border: 15px double rgb(11, 55, 58);
-        font-family: fantasy;
-        div.segmentosFormulario{
-            margin-left: 10px;
-            margin-top: 5px;
-            margin-right: 5px;
+        label{
+            font-family: fantasy;
+            font-size: 20px;
+        }
+        option{
+            font-weight: bolder;
         }
     }
 }
-// seccion Contacto Finalizado // 
+// seccion Contacto Fin //
+
+// seccion Formulario Inicio // 
+main.agradecimiento{
+    border: 10px solid blueviolet;
+    background-color: #eea928;
+    background-image: url(https://acegif.com/wp-content/gif/confetti-44.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    div.jumbotron{
+        background-color: transparent;
+    }
+}
+// seccion Formulario fin // 
+
 // animaciones // 
 @keyframes fadeIn {
     from {
